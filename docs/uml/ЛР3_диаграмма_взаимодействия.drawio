@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Диаграмма взаимодействия" id="d1">
+    <mxGraphModel dx="1062" dy="678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="520" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="o1" parent="1" style="html=1;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;" value="Пользователь" vertex="1">
+          <mxGeometry height="50" width="30" x="85" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o2" parent="1" style="html=1;fontStyle=4;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="FinancialDataForm" vertex="1">
+          <mxGeometry height="50" width="200" x="340" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o3" parent="1" style="html=1;fontStyle=4;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="FinancialDataController" vertex="1">
+          <mxGeometry height="50" width="200" x="720" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o4" parent="1" style="html=1;fontStyle=4;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Transaction" vertex="1">
+          <mxGeometry height="50" width="200" x="720" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o5" parent="1" style="html=1;fontStyle=4;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="finsafe_db" vertex="1">
+          <mxGeometry height="50" width="200" x="720" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="o6" parent="1" style="html=1;fontStyle=4;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="audit_log" vertex="1">
+          <mxGeometry height="50" width="200" x="340" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="k1" edge="1" parent="1" source="o1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=none;strokeColor=#444444;" target="o2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k2" edge="1" parent="1" source="o2" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=none;strokeColor=#444444;" target="o3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3" edge="1" parent="1" source="o3" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=none;strokeColor=#444444;" target="o4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k4" edge="1" parent="1" source="o4" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=none;strokeColor=#444444;" target="o5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k5" edge="1" parent="1" source="o5" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=none;strokeColor=#444444;" target="o6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mm1" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=block;endFill=1;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="67" as="sourcePoint" />
+            <mxPoint x="325" y="67" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt1" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="1: ввести данные об операции" vertex="1">
+          <mxGeometry height="22" width="185" x="150" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="mm8" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="103" as="sourcePoint" />
+            <mxPoint x="160" y="103" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt8" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="8: Операция добавлена" vertex="1">
+          <mxGeometry height="22" width="185" x="150" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="mm2" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=block;endFill=1;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="67" as="sourcePoint" />
+            <mxPoint x="710" y="67" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt2" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="2: addTransaction(data)" vertex="1">
+          <mxGeometry height="22" width="180" x="540" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="mm7" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="103" as="sourcePoint" />
+            <mxPoint x="550" y="103" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt7" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="7: результат" vertex="1">
+          <mxGeometry height="22" width="180" x="540" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="mm5" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=block;endFill=1;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="413" as="sourcePoint" />
+            <mxPoint x="550" y="413" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt5" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="5: trg_trans_insert" vertex="1">
+          <mxGeometry height="22" width="180" x="540" y="389" as="geometry" />
+        </mxCell>
+        <mxCell id="mm3" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=block;endFill=1;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="845" y="125" as="sourcePoint" />
+            <mxPoint x="845" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt3" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" value="3: create(data)" vertex="1">
+          <mxGeometry height="24" width="220" x="855" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="mm4" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=block;endFill=1;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="845" y="295" as="sourcePoint" />
+            <mxPoint x="845" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt4" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" value="4: INSERT INTO transactions" vertex="1">
+          <mxGeometry height="24" width="220" x="855" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="mm6" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endSize=8;fontSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795" y="385" as="sourcePoint" />
+            <mxPoint x="795" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mt6" parent="1" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;" value="6: id_transaction" vertex="1">
+          <mxGeometry height="24" width="160" x="625" y="328" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

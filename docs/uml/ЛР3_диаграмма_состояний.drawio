@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Диаграмма состояний FinancialGoal" id="d1">
+    <mxGraphModel dx="1120" dy="715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="600" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="st0" parent="1" style="html=1;ellipse;shape=startState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="40" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="st1" parent="1" style="html=1;rounded=1;whiteSpace=wrap;fontStyle=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Активна" vertex="1">
+          <mxGeometry height="60" width="180" x="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="st2" parent="1" style="html=1;rounded=1;whiteSpace=wrap;fontStyle=1;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;" value="Завершена" vertex="1">
+          <mxGeometry height="60" width="180" x="800" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="st3" parent="1" style="html=1;rounded=1;whiteSpace=wrap;fontStyle=1;fontSize=13;fillColor=#f8cecc;strokeColor=#b85450;" value="Отменена" vertex="1">
+          <mxGeometry height="60" width="180" x="260" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="en1" parent="1" style="html=1;ellipse;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="1080" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="en2" parent="1" style="html=1;ellipse;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="560" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="tr1" edge="1" parent="1" source="st0" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=open;endSize=12;" target="st1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr2" edge="1" parent="1" source="st1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=open;endSize=12;" target="st2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr3" edge="1" parent="1" source="st1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=open;endSize=12;" target="st3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr4" edge="1" parent="1" source="st2" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=open;endSize=12;" target="en1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr5" edge="1" parent="1" source="st3" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=open;endSize=12;" target="en2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="loop" edge="1" parent="1" style="html=1;edgeStyle=none;labelBackgroundColor=#ffffff;endArrow=open;endSize=12;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="314" y="120" />
+              <mxPoint x="386" y="120" />
+            </Array>
+            <mxPoint x="314" y="190" as="sourcePoint" />
+            <mxPoint x="386" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lt0" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="createGoal()" vertex="1">
+          <mxGeometry height="24" width="180" x="75" y="192" as="geometry" />
+        </mxCell>
+        <mxCell id="lt1" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="updateProgress() [current_amount &gt;= target_amount]" vertex="1">
+          <mxGeometry height="48" width="340" x="450" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="lt2" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;" value="пользователь отменил цель" vertex="1">
+          <mxGeometry height="28" width="220" x="360" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="lt3" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" value="updateProgress() [current_amount &lt; target_amount]" vertex="1">
+          <mxGeometry height="40" width="360" x="170" y="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
