@@ -1,0 +1,35 @@
+# Автоматический запуск тестов FinSafe в GitHub Actions.
+# Файл должен лежать именно в папке .github/workflows репозитория.
+
+name: Tests
+
+# Когда запускать: при каждом push в любую ветку
+# и при создании или обновлении Pull Request.
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    # Виртуальная машина GitHub с Windows, как на компьютере разработчика.
+    runs-on: windows-latest
+
+    steps:
+      # Шаг 1. Скачать код репозитория на виртуальную машину.
+      - name: Получить код
+        uses: actions/checkout@v4
+
+      # Шаг 2. Установить Python нужной версии.
+      - name: Установить Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Шаг 3. Установить библиотеки из requirements.txt (здесь это pytest).
+      - name: Установить зависимости
+        run: python -m pip install -r requirements.txt
+
+      # Шаг 4. Запустить тесты. Если хотя бы один тест упал,
+      # шаг завершится с ошибкой и на GitHub появится красный крестик.
+      - name: Запустить тесты
+        run: python -m pytest -v
