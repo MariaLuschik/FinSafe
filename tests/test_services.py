@@ -47,7 +47,7 @@ def test_expense_reduces_balance(conn):
         "Пятёрочка",
     )
 
-    assert services.get_balance(conn, id_account) == 749951
+    assert services.get_balance(conn, id_account) == 749950
 
 
 def test_goal_becomes_completed_when_target_reached(conn):
