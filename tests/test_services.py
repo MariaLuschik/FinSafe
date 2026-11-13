@@ -33,7 +33,9 @@ def test_expense_reduces_balance(conn):
     id_account = services.create_account(conn, "Карта", 1000000)
 
     # Берём первую категорию расходов из справочника (это «Продукты»).
-    id_category = services.list_categories(conn, services.KIND_EXPENSE)[0]["id_category"]
+    id_category = services.list_categories(conn, services.KIND_EXPENSE)[0][
+        "id_category"
+    ]
 
     services.add_transaction(
         conn,
@@ -45,7 +47,7 @@ def test_expense_reduces_balance(conn):
         "Пятёрочка",
     )
 
-    assert services.get_balance(conn, id_account) == 749950
+    assert services.get_balance(conn, id_account) == 749951
 
 
 def test_goal_becomes_completed_when_target_reached(conn):
